@@ -47,6 +47,8 @@ Partial Class Form1
         Me.chkFixed = New System.Windows.Forms.CheckBox()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.txtCapital = New System.Windows.Forms.TextBox()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.txtAcceptedCulture = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.txtPrimaryCulture = New System.Windows.Forms.TextBox()
         Me.txtMercantilism = New System.Windows.Forms.TextBox()
@@ -57,15 +59,15 @@ Partial Class Form1
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.imgFlag = New System.Windows.Forms.PictureBox()
         Me.btnFlag = New System.Windows.Forms.Button()
         Me.btnGenerate = New System.Windows.Forms.Button()
         Me.fbdModDirectory = New System.Windows.Forms.FolderBrowserDialog()
-        Me.Label14 = New System.Windows.Forms.Label()
+        Me.ofdFlag = New System.Windows.Forms.OpenFileDialog()
         Me.mnuMain.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.imgFlag, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'txtCountryName
@@ -108,7 +110,7 @@ Partial Class Form1
         Me.mnuMain.Location = New System.Drawing.Point(0, 0)
         Me.mnuMain.Name = "mnuMain"
         Me.mnuMain.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-        Me.mnuMain.Size = New System.Drawing.Size(738, 24)
+        Me.mnuMain.Size = New System.Drawing.Size(758, 24)
         Me.mnuMain.TabIndex = 3
         Me.mnuMain.Text = "MenuStrip1"
         '
@@ -168,10 +170,13 @@ Partial Class Form1
         'txtMonarch
         '
         Me.txtMonarch.Location = New System.Drawing.Point(114, 176)
+        Me.txtMonarch.Multiline = True
         Me.txtMonarch.Name = "txtMonarch"
-        Me.txtMonarch.Size = New System.Drawing.Size(119, 23)
+        Me.txtMonarch.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
+        Me.txtMonarch.Size = New System.Drawing.Size(119, 151)
         Me.txtMonarch.TabIndex = 0
-        Me.txtMonarch.Text = "Václav #4"" = 50"
+        Me.txtMonarch.Text = """Václav #4"" = 50" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & """Jirí #0"" = 25" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & """Karel #5"" = 40" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & """Premysl #0"" = 10" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & """Zikmund #0" &
+    """ = 0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & """Frantisek #0"" = 0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & """Jindrich #0"" = 5"
         '
         'Label5
         '
@@ -184,16 +189,19 @@ Partial Class Form1
         '
         'txtLeader
         '
-        Me.txtLeader.Location = New System.Drawing.Point(114, 210)
+        Me.txtLeader.Location = New System.Drawing.Point(114, 333)
+        Me.txtLeader.Multiline = True
         Me.txtLeader.Name = "txtLeader"
-        Me.txtLeader.Size = New System.Drawing.Size(119, 23)
+        Me.txtLeader.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
+        Me.txtLeader.Size = New System.Drawing.Size(119, 151)
         Me.txtLeader.TabIndex = 0
-        Me.txtLeader.Text = "Zajíc"
+        Me.txtLeader.Text = "Zajíc" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Jiskra" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Zelezný" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Capek" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Thurn" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Kolowrat" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Schwarzenberg" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & """z Rozmberka""" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Vel" &
+    "en" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(6, 210)
+        Me.Label6.Location = New System.Drawing.Point(6, 336)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(78, 15)
         Me.Label6.TabIndex = 4
@@ -217,7 +225,7 @@ Partial Class Form1
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 38)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(248, 247)
+        Me.GroupBox1.Size = New System.Drawing.Size(289, 507)
         Me.GroupBox1.TabIndex = 5
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Country File"
@@ -254,6 +262,8 @@ Partial Class Form1
         Me.GroupBox2.Controls.Add(Me.chkFixed)
         Me.GroupBox2.Controls.Add(Me.Label12)
         Me.GroupBox2.Controls.Add(Me.txtCapital)
+        Me.GroupBox2.Controls.Add(Me.Label14)
+        Me.GroupBox2.Controls.Add(Me.txtAcceptedCulture)
         Me.GroupBox2.Controls.Add(Me.Label11)
         Me.GroupBox2.Controls.Add(Me.txtPrimaryCulture)
         Me.GroupBox2.Controls.Add(Me.txtMercantilism)
@@ -266,7 +276,7 @@ Partial Class Form1
         Me.GroupBox2.Controls.Add(Me.Label7)
         Me.GroupBox2.Location = New System.Drawing.Point(307, 38)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(241, 247)
+        Me.GroupBox2.Size = New System.Drawing.Size(257, 327)
         Me.GroupBox2.TabIndex = 6
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Country History"
@@ -274,7 +284,7 @@ Partial Class Form1
         'chkFixed
         '
         Me.chkFixed.AutoSize = True
-        Me.chkFixed.Location = New System.Drawing.Point(107, 208)
+        Me.chkFixed.Location = New System.Drawing.Point(119, 283)
         Me.chkFixed.Name = "chkFixed"
         Me.chkFixed.Size = New System.Drawing.Size(58, 19)
         Me.chkFixed.TabIndex = 6
@@ -284,7 +294,7 @@ Partial Class Form1
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(6, 182)
+        Me.Label12.Location = New System.Drawing.Point(6, 257)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(47, 15)
         Me.Label12.TabIndex = 3
@@ -292,11 +302,30 @@ Partial Class Form1
         '
         'txtCapital
         '
-        Me.txtCapital.Location = New System.Drawing.Point(107, 179)
+        Me.txtCapital.Location = New System.Drawing.Point(119, 254)
         Me.txtCapital.Name = "txtCapital"
         Me.txtCapital.Size = New System.Drawing.Size(121, 23)
         Me.txtCapital.TabIndex = 2
         Me.txtCapital.Text = "266"
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Location = New System.Drawing.Point(6, 179)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(102, 15)
+        Me.Label14.TabIndex = 3
+        Me.Label14.Text = "Accepted Culture:"
+        '
+        'txtAcceptedCulture
+        '
+        Me.txtAcceptedCulture.Location = New System.Drawing.Point(119, 176)
+        Me.txtAcceptedCulture.Multiline = True
+        Me.txtAcceptedCulture.Name = "txtAcceptedCulture"
+        Me.txtAcceptedCulture.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
+        Me.txtAcceptedCulture.Size = New System.Drawing.Size(121, 71)
+        Me.txtAcceptedCulture.TabIndex = 2
+        Me.txtAcceptedCulture.Text = "sorbian"
         '
         'Label11
         '
@@ -309,7 +338,7 @@ Partial Class Form1
         '
         'txtPrimaryCulture
         '
-        Me.txtPrimaryCulture.Location = New System.Drawing.Point(107, 148)
+        Me.txtPrimaryCulture.Location = New System.Drawing.Point(119, 148)
         Me.txtPrimaryCulture.Name = "txtPrimaryCulture"
         Me.txtPrimaryCulture.Size = New System.Drawing.Size(121, 23)
         Me.txtPrimaryCulture.TabIndex = 2
@@ -317,7 +346,7 @@ Partial Class Form1
         '
         'txtMercantilism
         '
-        Me.txtMercantilism.Location = New System.Drawing.Point(107, 62)
+        Me.txtMercantilism.Location = New System.Drawing.Point(119, 62)
         Me.txtMercantilism.Name = "txtMercantilism"
         Me.txtMercantilism.Size = New System.Drawing.Size(121, 23)
         Me.txtMercantilism.TabIndex = 2
@@ -328,7 +357,7 @@ Partial Class Form1
         Me.cmbReligion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbReligion.FormattingEnabled = True
         Me.cmbReligion.Items.AddRange(New Object() {"Catholic", "Protestant", "Reformed", "Orthodox", "Coptic", "Anglican", "Hussite", "Sunni", "Shia", "Ibadi", "Mahayana", "Theravada", "Vajrayana", "Confucian", "Shinto", "Animist", "Fetishist", "Totemist", "Inti", "Mayan", "Nahuatl", "Tengri", "Norse", "Hindu", "Sikh", "Jewish", "Zoroastrian"})
-        Me.cmbReligion.Location = New System.Drawing.Point(107, 120)
+        Me.cmbReligion.Location = New System.Drawing.Point(119, 120)
         Me.cmbReligion.Name = "cmbReligion"
         Me.cmbReligion.Size = New System.Drawing.Size(121, 23)
         Me.cmbReligion.TabIndex = 1
@@ -338,7 +367,7 @@ Partial Class Form1
         Me.cmbTech.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbTech.FormattingEnabled = True
         Me.cmbTech.Items.AddRange(New Object() {"western", "high_american", "eastern", "anatolian", "muslim", "indian", "east_african", "chinese", "west_african", "central_african", "nomadic", "mesoamerican", "andean", "north_american", "south_american"})
-        Me.cmbTech.Location = New System.Drawing.Point(107, 91)
+        Me.cmbTech.Location = New System.Drawing.Point(119, 91)
         Me.cmbTech.Name = "cmbTech"
         Me.cmbTech.Size = New System.Drawing.Size(121, 23)
         Me.cmbTech.TabIndex = 1
@@ -348,7 +377,7 @@ Partial Class Form1
         Me.cmbGovernment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbGovernment.FormattingEnabled = True
         Me.cmbGovernment.Items.AddRange(New Object() {"monarchy", "republic", "tribal", "native", "theocracy"})
-        Me.cmbGovernment.Location = New System.Drawing.Point(107, 31)
+        Me.cmbGovernment.Location = New System.Drawing.Point(119, 31)
         Me.cmbGovernment.Name = "cmbGovernment"
         Me.cmbGovernment.Size = New System.Drawing.Size(121, 23)
         Me.cmbGovernment.TabIndex = 1
@@ -389,14 +418,14 @@ Partial Class Form1
         Me.Label7.TabIndex = 0
         Me.Label7.Text = "Government:"
         '
-        'PictureBox1
+        'imgFlag
         '
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(582, 67)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(128, 128)
-        Me.PictureBox1.TabIndex = 7
-        Me.PictureBox1.TabStop = False
+        Me.imgFlag.Image = CType(resources.GetObject("imgFlag.Image"), System.Drawing.Image)
+        Me.imgFlag.Location = New System.Drawing.Point(582, 67)
+        Me.imgFlag.Name = "imgFlag"
+        Me.imgFlag.Size = New System.Drawing.Size(128, 128)
+        Me.imgFlag.TabIndex = 7
+        Me.imgFlag.TabStop = False
         '
         'btnFlag
         '
@@ -409,6 +438,7 @@ Partial Class Form1
         '
         'btnGenerate
         '
+        Me.btnGenerate.Enabled = False
         Me.btnGenerate.Location = New System.Drawing.Point(582, 262)
         Me.btnGenerate.Name = "btnGenerate"
         Me.btnGenerate.Size = New System.Drawing.Size(128, 23)
@@ -416,36 +446,26 @@ Partial Class Form1
         Me.btnGenerate.Text = "Generate Country"
         Me.btnGenerate.UseVisualStyleBackColor = True
         '
-        'Label14
-        '
-        Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(18, 303)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(42, 15)
-        Me.Label14.TabIndex = 9
-        Me.Label14.Text = "Debug"
-        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(738, 330)
-        Me.Controls.Add(Me.Label14)
+        Me.ClientSize = New System.Drawing.Size(758, 557)
         Me.Controls.Add(Me.btnGenerate)
         Me.Controls.Add(Me.btnFlag)
-        Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.imgFlag)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.mnuMain)
         Me.Name = "Form1"
-        Me.Text = "Form1"
+        Me.Text = "Line_r's EU4 Mod Toolbox"
         Me.mnuMain.ResumeLayout(False)
         Me.mnuMain.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.imgFlag, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -485,11 +505,13 @@ Partial Class Form1
     Friend WithEvents txtAdjective As TextBox
     Friend WithEvents chkFixed As CheckBox
     Friend WithEvents cmbGraphicalCulture As ComboBox
-    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents imgFlag As PictureBox
     Friend WithEvents btnFlag As Button
     Friend WithEvents btnGenerate As Button
     Friend WithEvents mnuOpen As ToolStripMenuItem
     Friend WithEvents mnuExit As ToolStripMenuItem
     Friend WithEvents fbdModDirectory As FolderBrowserDialog
+    Friend WithEvents ofdFlag As OpenFileDialog
     Friend WithEvents Label14 As Label
+    Friend WithEvents txtAcceptedCulture As TextBox
 End Class

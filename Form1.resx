@@ -70,10 +70,10 @@
         +/48Y4x9AwxhsnXBwZZBAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="PictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="imgFlag.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAIAAABMXPacAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vAAADrwBlbxySQAAABp0RVh0U29mdHdhcmUAUGFpbnQuTkVUIHYzLjUuMTFH80I3AAAhj0lEQVR4Xu1d
+        vgAADr4B6kKxwAAAABp0RVh0U29mdHdhcmUAUGFpbnQuTkVUIHYzLjUuMTFH80I3AAAhj0lEQVR4Xu1d
         CVRTV/rvqYCQ5GUjJOxhX0OAsO87yk5CIErYZRcQRVBwA9wAQaqo4IobWsW9OlOtW1uXdqYdtVOrra11
         q452Om11tGM7Hf+f74b8Y0IQISHSw3d+h/Peffe9vPf97v2We+97vPEujf4OlfoOlYYDNl4KxZqDKRkM
         XuGsw89BwyF/aKh41XsefH2lNUH5bxyiUvdTKGPQCED5bwAPcqVjGDGA8scI0CTGCNAwxgjQMMYI0DDG
