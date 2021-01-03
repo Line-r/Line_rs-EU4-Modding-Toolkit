@@ -27,11 +27,11 @@ Partial Class Form1
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtTag = New System.Windows.Forms.TextBox()
-        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.OpenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mnuMain = New System.Windows.Forms.MenuStrip()
+        Me.mnuFile = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mnuOpen = New System.Windows.Forms.ToolStripMenuItem()
         Me.toolStripSeparator = New System.Windows.Forms.ToolStripSeparator()
-        Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mnuExit = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txtColor = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -60,7 +60,9 @@ Partial Class Form1
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.btnFlag = New System.Windows.Forms.Button()
         Me.btnGenerate = New System.Windows.Forms.Button()
-        Me.MenuStrip1.SuspendLayout()
+        Me.fbdModDirectory = New System.Windows.Forms.FolderBrowserDialog()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.mnuMain.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -72,6 +74,7 @@ Partial Class Form1
         Me.txtCountryName.Name = "txtCountryName"
         Me.txtCountryName.Size = New System.Drawing.Size(119, 23)
         Me.txtCountryName.TabIndex = 0
+        Me.txtCountryName.Text = "Bohemia"
         '
         'Label1
         '
@@ -97,42 +100,44 @@ Partial Class Form1
         Me.txtTag.Name = "txtTag"
         Me.txtTag.Size = New System.Drawing.Size(119, 23)
         Me.txtTag.TabIndex = 0
+        Me.txtTag.Text = "BOH"
         '
-        'MenuStrip1
+        'mnuMain
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem})
-        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(738, 24)
-        Me.MenuStrip1.TabIndex = 3
-        Me.MenuStrip1.Text = "MenuStrip1"
+        Me.mnuMain.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuFile})
+        Me.mnuMain.Location = New System.Drawing.Point(0, 0)
+        Me.mnuMain.Name = "mnuMain"
+        Me.mnuMain.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
+        Me.mnuMain.Size = New System.Drawing.Size(738, 24)
+        Me.mnuMain.TabIndex = 3
+        Me.mnuMain.Text = "MenuStrip1"
         '
-        'FileToolStripMenuItem
+        'mnuFile
         '
-        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OpenToolStripMenuItem, Me.toolStripSeparator, Me.ExitToolStripMenuItem})
-        Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
-        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
-        Me.FileToolStripMenuItem.Text = "&File"
+        Me.mnuFile.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuOpen, Me.toolStripSeparator, Me.mnuExit})
+        Me.mnuFile.Name = "mnuFile"
+        Me.mnuFile.Size = New System.Drawing.Size(37, 20)
+        Me.mnuFile.Text = "&File"
         '
-        'OpenToolStripMenuItem
+        'mnuOpen
         '
-        Me.OpenToolStripMenuItem.Image = CType(resources.GetObject("OpenToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.OpenToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.OpenToolStripMenuItem.Name = "OpenToolStripMenuItem"
-        Me.OpenToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.O), System.Windows.Forms.Keys)
-        Me.OpenToolStripMenuItem.Size = New System.Drawing.Size(146, 22)
-        Me.OpenToolStripMenuItem.Text = "&Open"
+        Me.mnuOpen.Image = CType(resources.GetObject("mnuOpen.Image"), System.Drawing.Image)
+        Me.mnuOpen.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.mnuOpen.Name = "mnuOpen"
+        Me.mnuOpen.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.O), System.Windows.Forms.Keys)
+        Me.mnuOpen.Size = New System.Drawing.Size(146, 22)
+        Me.mnuOpen.Text = "&Open"
         '
         'toolStripSeparator
         '
         Me.toolStripSeparator.Name = "toolStripSeparator"
         Me.toolStripSeparator.Size = New System.Drawing.Size(143, 6)
         '
-        'ExitToolStripMenuItem
+        'mnuExit
         '
-        Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(146, 22)
-        Me.ExitToolStripMenuItem.Text = "E&xit"
+        Me.mnuExit.Name = "mnuExit"
+        Me.mnuExit.Size = New System.Drawing.Size(146, 22)
+        Me.mnuExit.Text = "E&xit"
         '
         'Label3
         '
@@ -149,6 +154,7 @@ Partial Class Form1
         Me.txtColor.Name = "txtColor"
         Me.txtColor.Size = New System.Drawing.Size(119, 23)
         Me.txtColor.TabIndex = 0
+        Me.txtColor.Text = "161  139  40"
         '
         'Label4
         '
@@ -165,6 +171,7 @@ Partial Class Form1
         Me.txtMonarch.Name = "txtMonarch"
         Me.txtMonarch.Size = New System.Drawing.Size(119, 23)
         Me.txtMonarch.TabIndex = 0
+        Me.txtMonarch.Text = "Václav #4"" = 50"
         '
         'Label5
         '
@@ -181,6 +188,7 @@ Partial Class Form1
         Me.txtLeader.Name = "txtLeader"
         Me.txtLeader.Size = New System.Drawing.Size(119, 23)
         Me.txtLeader.TabIndex = 0
+        Me.txtLeader.Text = "Zajíc"
         '
         'Label6
         '
@@ -216,8 +224,9 @@ Partial Class Form1
         '
         'cmbGraphicalCulture
         '
+        Me.cmbGraphicalCulture.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbGraphicalCulture.FormattingEnabled = True
-        Me.cmbGraphicalCulture.Items.AddRange(New Object() {"westerngfx"})
+        Me.cmbGraphicalCulture.Items.AddRange(New Object() {"westerngfx", "easterngfx", "muslimgfx", "indiangfx", "asiangfx", "africangfx", "northamericagfx", "southamericagfx", "inuitgfx"})
         Me.cmbGraphicalCulture.Location = New System.Drawing.Point(114, 116)
         Me.cmbGraphicalCulture.Name = "cmbGraphicalCulture"
         Me.cmbGraphicalCulture.Size = New System.Drawing.Size(119, 23)
@@ -238,6 +247,7 @@ Partial Class Form1
         Me.txtAdjective.Name = "txtAdjective"
         Me.txtAdjective.Size = New System.Drawing.Size(119, 23)
         Me.txtAdjective.TabIndex = 0
+        Me.txtAdjective.Text = "Bohemian"
         '
         'GroupBox2
         '
@@ -286,6 +296,7 @@ Partial Class Form1
         Me.txtCapital.Name = "txtCapital"
         Me.txtCapital.Size = New System.Drawing.Size(121, 23)
         Me.txtCapital.TabIndex = 2
+        Me.txtCapital.Text = "266"
         '
         'Label11
         '
@@ -302,6 +313,7 @@ Partial Class Form1
         Me.txtPrimaryCulture.Name = "txtPrimaryCulture"
         Me.txtPrimaryCulture.Size = New System.Drawing.Size(121, 23)
         Me.txtPrimaryCulture.TabIndex = 2
+        Me.txtPrimaryCulture.Text = "czech"
         '
         'txtMercantilism
         '
@@ -309,11 +321,13 @@ Partial Class Form1
         Me.txtMercantilism.Name = "txtMercantilism"
         Me.txtMercantilism.Size = New System.Drawing.Size(121, 23)
         Me.txtMercantilism.TabIndex = 2
+        Me.txtMercantilism.Text = "10"
         '
         'cmbReligion
         '
+        Me.cmbReligion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbReligion.FormattingEnabled = True
-        Me.cmbReligion.Items.AddRange(New Object() {"Catholic"})
+        Me.cmbReligion.Items.AddRange(New Object() {"Catholic", "Protestant", "Reformed", "Orthodox", "Coptic", "Anglican", "Hussite", "Sunni", "Shia", "Ibadi", "Mahayana", "Theravada", "Vajrayana", "Confucian", "Shinto", "Animist", "Fetishist", "Totemist", "Inti", "Mayan", "Nahuatl", "Tengri", "Norse", "Hindu", "Sikh", "Jewish", "Zoroastrian"})
         Me.cmbReligion.Location = New System.Drawing.Point(107, 120)
         Me.cmbReligion.Name = "cmbReligion"
         Me.cmbReligion.Size = New System.Drawing.Size(121, 23)
@@ -321,8 +335,9 @@ Partial Class Form1
         '
         'cmbTech
         '
+        Me.cmbTech.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbTech.FormattingEnabled = True
-        Me.cmbTech.Items.AddRange(New Object() {"Western"})
+        Me.cmbTech.Items.AddRange(New Object() {"western", "high_american", "eastern", "anatolian", "muslim", "indian", "east_african", "chinese", "west_african", "central_african", "nomadic", "mesoamerican", "andean", "north_american", "south_american"})
         Me.cmbTech.Location = New System.Drawing.Point(107, 91)
         Me.cmbTech.Name = "cmbTech"
         Me.cmbTech.Size = New System.Drawing.Size(121, 23)
@@ -330,8 +345,9 @@ Partial Class Form1
         '
         'cmbGovernment
         '
+        Me.cmbGovernment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbGovernment.FormattingEnabled = True
-        Me.cmbGovernment.Items.AddRange(New Object() {"Monarchy"})
+        Me.cmbGovernment.Items.AddRange(New Object() {"monarchy", "republic", "tribal", "native", "theocracy"})
         Me.cmbGovernment.Location = New System.Drawing.Point(107, 31)
         Me.cmbGovernment.Name = "cmbGovernment"
         Me.cmbGovernment.Size = New System.Drawing.Size(121, 23)
@@ -400,21 +416,31 @@ Partial Class Form1
         Me.btnGenerate.Text = "Generate Country"
         Me.btnGenerate.UseVisualStyleBackColor = True
         '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Location = New System.Drawing.Point(18, 303)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(42, 15)
+        Me.Label14.TabIndex = 9
+        Me.Label14.Text = "Debug"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(738, 305)
+        Me.ClientSize = New System.Drawing.Size(738, 330)
+        Me.Controls.Add(Me.Label14)
         Me.Controls.Add(Me.btnGenerate)
         Me.Controls.Add(Me.btnFlag)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Controls.Add(Me.MenuStrip1)
+        Me.Controls.Add(Me.mnuMain)
         Me.Name = "Form1"
         Me.Text = "Form1"
-        Me.MenuStrip1.ResumeLayout(False)
-        Me.MenuStrip1.PerformLayout()
+        Me.mnuMain.ResumeLayout(False)
+        Me.mnuMain.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
@@ -429,8 +455,8 @@ Partial Class Form1
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents txtTag As TextBox
-    Friend WithEvents MenuStrip1 As MenuStrip
-    Friend WithEvents FileToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents mnuMain As MenuStrip
+    Friend WithEvents mnuFile As ToolStripMenuItem
     Friend WithEvents OpenToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents toolStripSeparator As ToolStripSeparator
     Friend WithEvents ExitToolStripMenuItem As ToolStripMenuItem
@@ -462,4 +488,8 @@ Partial Class Form1
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents btnFlag As Button
     Friend WithEvents btnGenerate As Button
+    Friend WithEvents mnuOpen As ToolStripMenuItem
+    Friend WithEvents mnuExit As ToolStripMenuItem
+    Friend WithEvents fbdModDirectory As FolderBrowserDialog
+    Friend WithEvents Label14 As Label
 End Class
