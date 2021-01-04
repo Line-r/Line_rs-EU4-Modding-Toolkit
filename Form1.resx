@@ -70,10 +70,27 @@
         +/48Y4x9AwxhsnXBwZZBAAAAAElFTkSuQmCC
 </value>
   </data>
+  <data name="txtUnits.Text" xml:space="preserve">
+    <value>western_medieval_infantry
+western_medieval_knights
+western_men_at_arms
+swiss_landsknechten
+dutch_maurician
+austrian_tercio
+austrian_grenzer
+austrian_hussar
+austrian_white_coat
+prussian_uhlan
+austrian_jaeger
+mixed_order_infantry
+open_order_cavalry
+napoleonic_square
+napoleonic_lancers</value>
+  </data>
   <data name="imgFlag.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAIAAABMXPacAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vgAADr4B6kKxwAAAABp0RVh0U29mdHdhcmUAUGFpbnQuTkVUIHYzLjUuMTFH80I3AAAhj0lEQVR4Xu1d
+        vQAADr0BR/uQrQAAABp0RVh0U29mdHdhcmUAUGFpbnQuTkVUIHYzLjUuMTFH80I3AAAhj0lEQVR4Xu1d
         CVRTV/rvqYCQ5GUjJOxhX0OAsO87yk5CIErYZRcQRVBwA9wAQaqo4IobWsW9OlOtW1uXdqYdtVOrra11
         q452Om11tGM7Hf+f74b8Y0IQISHSw3d+h/Peffe9vPf97v2We+97vPEujf4OlfoOlYYDNl4KxZqDKRkM
         XuGsw89BwyF/aKh41XsefH2lNUH5bxyiUvdTKGPQCED5bwAPcqVjGDGA8scI0CTGCNAwxgjQMMYI0DDG

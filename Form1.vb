@@ -28,6 +28,8 @@
         Dim Religion As String
         Dim PrimaryCulture As String
         Dim AcceptedCulture As String
+        Dim Ideas As String
+        Dim Units As String
         Dim Capital As Integer
         Dim file As System.IO.StreamWriter
 
@@ -151,15 +153,40 @@
         file.WriteLine("religion = " & Religion)
         file.WriteLine("primary_culture = " & PrimaryCulture)
 
+        If (txtIdeas.Lines.Count > 1) Then
+            Ideas = ""
+            For Each line As String In txtIdeas.Lines
+                Ideas = Ideas & " " & line & vbCrLf
+            Next
+            Ideas = Ideas.Trim()
+        End If
+        file.WriteLine("historical_idea_groups = { ")
+        file.WriteLine(Ideas)
+        file.WriteLine(" } ")
+
+        If (txtUnits.Lines.Count > 1) Then
+            Units = ""
+            For Each line As String In txtUnits.Lines
+                Units = Units & " " & line & vbCrLf
+            Next
+            Units = Units.Trim()
+        End If
+        file.WriteLine("historical_units = { ")
+        file.WriteLine(Units)
+        file.WriteLine(" } ")
+
         If (txtAcceptedCulture.Lines.Count > 1) Then
             AcceptedCulture = ""
             For Each line As String In txtAcceptedCulture.Lines
-                AcceptedCulture = AcceptedCulture & " " & line & vbCrLf
+                AcceptedCulture = AcceptedCulture & " " & "add_accepted_culture = " & line & vbCrLf
             Next
             AcceptedCulture = AcceptedCulture.Trim()
+
+        Else
+            AcceptedCulture = txtAcceptedCulture.Text
+            AcceptedCulture = "add_accepted_culture = " & AcceptedCulture
         End If
-        file.WriteLine("add_accepted_culture = " & AcceptedCulture)
-        'Ensure that above has add_accepted_culture before each line
+        file.WriteLine(AcceptedCulture)
 
 
         If chkFixed.Checked = False Then

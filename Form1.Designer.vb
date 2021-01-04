@@ -64,6 +64,10 @@ Partial Class Form1
         Me.btnGenerate = New System.Windows.Forms.Button()
         Me.fbdModDirectory = New System.Windows.Forms.FolderBrowserDialog()
         Me.ofdFlag = New System.Windows.Forms.OpenFileDialog()
+        Me.txtIdeas = New System.Windows.Forms.TextBox()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.txtUnits = New System.Windows.Forms.TextBox()
+        Me.Label16 = New System.Windows.Forms.Label()
         Me.mnuMain.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -262,7 +266,11 @@ Partial Class Form1
         Me.GroupBox2.Controls.Add(Me.chkFixed)
         Me.GroupBox2.Controls.Add(Me.Label12)
         Me.GroupBox2.Controls.Add(Me.txtCapital)
+        Me.GroupBox2.Controls.Add(Me.Label16)
+        Me.GroupBox2.Controls.Add(Me.Label15)
+        Me.GroupBox2.Controls.Add(Me.txtUnits)
         Me.GroupBox2.Controls.Add(Me.Label14)
+        Me.GroupBox2.Controls.Add(Me.txtIdeas)
         Me.GroupBox2.Controls.Add(Me.txtAcceptedCulture)
         Me.GroupBox2.Controls.Add(Me.Label11)
         Me.GroupBox2.Controls.Add(Me.txtPrimaryCulture)
@@ -276,7 +284,7 @@ Partial Class Form1
         Me.GroupBox2.Controls.Add(Me.Label7)
         Me.GroupBox2.Location = New System.Drawing.Point(307, 38)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(257, 327)
+        Me.GroupBox2.Size = New System.Drawing.Size(257, 507)
         Me.GroupBox2.TabIndex = 6
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Country History"
@@ -284,7 +292,7 @@ Partial Class Form1
         'chkFixed
         '
         Me.chkFixed.AutoSize = True
-        Me.chkFixed.Location = New System.Drawing.Point(119, 283)
+        Me.chkFixed.Location = New System.Drawing.Point(119, 436)
         Me.chkFixed.Name = "chkFixed"
         Me.chkFixed.Size = New System.Drawing.Size(58, 19)
         Me.chkFixed.TabIndex = 6
@@ -294,7 +302,7 @@ Partial Class Form1
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(6, 257)
+        Me.Label12.Location = New System.Drawing.Point(6, 410)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(47, 15)
         Me.Label12.TabIndex = 3
@@ -302,7 +310,7 @@ Partial Class Form1
         '
         'txtCapital
         '
-        Me.txtCapital.Location = New System.Drawing.Point(119, 254)
+        Me.txtCapital.Location = New System.Drawing.Point(119, 407)
         Me.txtCapital.Name = "txtCapital"
         Me.txtCapital.Size = New System.Drawing.Size(121, 23)
         Me.txtCapital.TabIndex = 2
@@ -446,6 +454,45 @@ Partial Class Form1
         Me.btnGenerate.Text = "Generate Country"
         Me.btnGenerate.UseVisualStyleBackColor = True
         '
+        'txtIdeas
+        '
+        Me.txtIdeas.Location = New System.Drawing.Point(119, 253)
+        Me.txtIdeas.Multiline = True
+        Me.txtIdeas.Name = "txtIdeas"
+        Me.txtIdeas.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
+        Me.txtIdeas.Size = New System.Drawing.Size(121, 71)
+        Me.txtIdeas.TabIndex = 2
+        Me.txtIdeas.Text = "defensive_ideas" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "offensive_ideas" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "religious_ideas" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "economic_ideas" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "diplomatic_ide" &
+    "as" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "innovativeness_ideas" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "spy_ideas" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "trade_ideas"
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Location = New System.Drawing.Point(6, 256)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(73, 15)
+        Me.Label15.TabIndex = 3
+        Me.Label15.Text = "Idea Groups:"
+        '
+        'txtUnits
+        '
+        Me.txtUnits.Location = New System.Drawing.Point(119, 330)
+        Me.txtUnits.Multiline = True
+        Me.txtUnits.Name = "txtUnits"
+        Me.txtUnits.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
+        Me.txtUnits.Size = New System.Drawing.Size(121, 71)
+        Me.txtUnits.TabIndex = 2
+        Me.txtUnits.Text = resources.GetString("txtUnits.Text")
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Location = New System.Drawing.Point(6, 333)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(37, 15)
+        Me.Label16.TabIndex = 3
+        Me.Label16.Text = "Units:"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
@@ -514,4 +561,8 @@ Partial Class Form1
     Friend WithEvents ofdFlag As OpenFileDialog
     Friend WithEvents Label14 As Label
     Friend WithEvents txtAcceptedCulture As TextBox
+    Friend WithEvents Label16 As Label
+    Friend WithEvents Label15 As Label
+    Friend WithEvents txtUnits As TextBox
+    Friend WithEvents txtIdeas As TextBox
 End Class
