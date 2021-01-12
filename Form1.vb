@@ -21,6 +21,10 @@
 
     End Sub
 
+    Private Sub mnuExit_Click(Sender As Object, e As EventArgs) Handles mnuExit.Click
+        Me.Close()
+    End Sub
+
 
 
 
