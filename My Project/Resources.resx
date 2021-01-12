@@ -121,4 +121,10 @@
   <data name="BOH_flag_EU4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BOH_flag_EU4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="discordlogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\discordlogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="githublogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\githublogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
