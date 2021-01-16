@@ -150,6 +150,7 @@ Partial Class Form1
         Me.Label32 = New System.Windows.Forms.Label()
         Me.Label29 = New System.Windows.Forms.Label()
         Me.chkMajor = New System.Windows.Forms.CheckBox()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.mnuMain.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -666,6 +667,7 @@ Partial Class Form1
         'TabPage2
         '
         Me.TabPage2.BackColor = System.Drawing.SystemColors.Control
+        Me.TabPage2.Controls.Add(Me.Button1)
         Me.TabPage2.Controls.Add(Me.GroupBox4)
         Me.TabPage2.Controls.Add(Me.GroupBox3)
         Me.TabPage2.Location = New System.Drawing.Point(4, 24)
@@ -966,7 +968,7 @@ Partial Class Form1
         Me.TabPage3.Controls.Add(Me.GroupBox5)
         Me.TabPage3.Location = New System.Drawing.Point(4, 24)
         Me.TabPage3.Name = "TabPage3"
-        Me.TabPage3.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
+        Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage3.Size = New System.Drawing.Size(793, 520)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Decision Generator"
@@ -1439,6 +1441,16 @@ Partial Class Form1
         Me.chkMajor.Text = "Major?"
         Me.chkMajor.UseVisualStyleBackColor = True
         '
+        'Button1
+        '
+        Me.Button1.Enabled = False
+        Me.Button1.Location = New System.Drawing.Point(662, 492)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(128, 23)
+        Me.Button1.TabIndex = 11
+        Me.Button1.Text = "Generate Province"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
@@ -1609,4 +1621,5 @@ Partial Class Form1
     Friend WithEvents Label32 As Label
     Friend WithEvents mnuHelp As ToolStripMenuItem
     Friend WithEvents mnuAbout As ToolStripMenuItem
+    Friend WithEvents Button1 As Button
 End Class

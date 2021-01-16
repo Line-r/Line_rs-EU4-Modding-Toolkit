@@ -458,4 +458,8 @@
     Private Sub btnEffectAND_Click(sender As Object, e As EventArgs) Handles btnEffectAND.Click
         txtEffect.Text += "AND = {   }"
     End Sub
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        TabControl1.TabPages.Remove(TabPage2)
+    End Sub
 End Class
