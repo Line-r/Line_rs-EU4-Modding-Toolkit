@@ -25,6 +25,11 @@
         Me.Close()
     End Sub
 
+    Private Sub mnuWiki_Click(Sender As Object, e As EventArgs) Handles mnuWiki.Click
+        Dim url As String = "https://eu4.paradoxwikis.com/Modding"
+        Process.Start("C:\Program Files\Internet Explorer\iexplore.exe", url)
+    End Sub
+
 
 
 
@@ -232,7 +237,7 @@
     End Sub
 
     Private Sub btnFlag_Click(sender As Object, e As EventArgs) Handles btnFlag.Click
-        ofdFlag.Filter = "TGA Files|*.tga"
+        ofdFlag.Filter = "PNG Files|*.png"
 
         If (ofdFlag.ShowDialog() = DialogResult.OK) Then
             FlagDir = ofdFlag.FileName
@@ -462,4 +467,6 @@
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         TabControl1.TabPages.Remove(TabPage2)
     End Sub
+
+
 End Class

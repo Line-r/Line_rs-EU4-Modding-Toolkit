@@ -8,7 +8,7 @@
     <UseWindowsForms>true</UseWindowsForms>
     <MyType>WindowsForms</MyType>
     <AssemblyName>Line_r's EU4 Modding Toolkit</AssemblyName>
-    <ApplicationIcon>Custom-Icon-Design-Flatastic-7-Tools-2.ico</ApplicationIcon>
+    <ApplicationIcon>LEU4MTIcon.ico</ApplicationIcon>
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
   </PropertyGroup>
 
